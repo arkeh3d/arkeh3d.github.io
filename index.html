@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arkeh_3D · Substation 3D assets</title>
+<meta name="description" content="Arkeh_3D: real-scale 3D assets of high-voltage substation equipment for Unity, built for training, simulation and VR.">
+<link rel="icon" href="img/key_icon_160.png">
+<style>
+  :root{--bg:#f5f6f8;--card:#ffffff;--ink:#1b1f24;--mut:#5a6270;--line:#dde1e6;--acc:#1f6fb2}
+  @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1f24;--ink:#e8ebef;--mut:#a3abb7;--line:#2b313a;--acc:#5aa2e6}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{padding:48px 16px 24px;text-align:center}
+  header img{width:72px;height:72px;border-radius:14px}
+  h1{margin:12px 0 4px;font-size:30px;letter-spacing:.3px}
+  .sub{color:var(--mut);margin:0;font-size:17px}
+  main{max-width:1100px;margin:0 auto;padding:0 16px 56px}
+  .hero{display:block;width:100%;border-radius:14px;border:1px solid var(--line);margin:16px 0 32px}
+  h2{font-size:22px;margin:40px 0 12px}
+  p{max-width:70ch}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .fact b{display:block;font-size:20px}
+  .fact span{color:var(--mut);font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+  figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  figure img{display:block;width:100%;height:auto}
+  figcaption{padding:10px 12px;font-size:14px;color:var(--mut)}
+  ul{padding-left:20px}
+  li{margin:4px 0}
+  .btn{display:inline-block;margin-top:8px;padding:10px 18px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600}
+  .btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+  footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-align:center;padding:24px 16px}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <img src="img/key_icon_160.png" alt="Arkeh_3D">
+  <h1>Arkeh_3D</h1>
+  <p class="sub">Real-scale 3D assets of high-voltage substation equipment, made for training, simulation and VR in Unity.</p>
+</header>
+
+<main>
+  <img class="hero" src="img/key_cover_1950x1300.jpg" alt="Substation 138 kV Kit: a complete line bay in Unity">
+
+  <h2>Substation 138 kV Kit</h2>
+  <p>A kit of 14 generic 138 kV substation equipment models at real scale (1 unit = 1 m), with operable parts, connection
+     points on every terminal and a conductor tool, so a whole bay can be assembled and operated inside Unity.
+     Built for URP and Built-in render pipelines, Unity 6000.0 LTS or newer.</p>
+
+  <div class="facts">
+    <div class="fact"><b>14 prefabs</b><span>breaker, 3 disconnector types, CT, VT, surge arrester, post insulator, line trap, insulator strings, gantries, power transformer</span></div>
+    <div class="fact"><b>3 LODs</b><span>LOD Group, primitive colliders, 8 shared materials (SRP Batcher)</span></div>
+    <div class="fact"><b>Operable parts</b><span>disconnector blades, semi-pantograph arms, cabinet doors (Open / Close / Toggle)</span></div>
+    <div class="fact"><b>Connection points</b><span>on every terminal, plus a ConductorSpan tool with sag and radius</span></div>
+    <div class="fact"><b>2 scenes</b><span>a complete line bay (Demo) and a Showcase of every piece</span></div>
+    <div class="fact"><b>Measured</b><span>552 k triangles on screen, 1 307 fps average on an RTX 4050 at 1920 × 1080</span></div>
+  </div>
+
+  <!-- TODO Bruno: quando a página do Asset Store estiver no ar, trocar o href pelo link do pacote -->
+  <a class="btn" href="#" aria-disabled="true">Asset Store page (coming soon)</a>
+
+  <h2>Gallery</h2>
+  <div class="grid">
+    <figure><img src="img/shot_01_bay_overview.jpg" alt="Line bay overview" loading="lazy"><figcaption>Complete 138 kV line bay, assembled in the real order of equipment</figcaption></figure>
+    <figure><img src="img/shot_03_line_entry.jpg" alt="Line entry with gantry and semi-pantograph disconnector" loading="lazy"><figcaption>Line entry: gantry with anchor strings and the semi-pantograph disconnector under the switch beam</figcaption></figure>
+    <figure><img src="img/shot_10_pantograph_open.jpg" alt="Semi-pantograph disconnector open" loading="lazy"><figcaption>Semi-pantograph disconnector open: arms folded along the span, 15° above horizontal</figcaption></figure>
+    <figure><img src="img/shot_05_disconnector_open.jpg" alt="Center-break disconnector open" loading="lazy"><figcaption>Center-break disconnector, blades open</figcaption></figure>
+    <figure><img src="img/shot_04_breaker.jpg" alt="Live-tank circuit breaker" loading="lazy"><figcaption>138 kV live-tank circuit breaker on its lattice support</figcaption></figure>
+    <figure><img src="img/shot_06_instrument_transformers.jpg" alt="Instrument transformers" loading="lazy"><figcaption>Current and voltage transformers, surge arrester and line trap</figcaption></figure>
+    <figure><img src="img/shot_09_transformer.jpg" alt="Power transformer" loading="lazy"><figcaption>138/13.8 kV power transformer with bushings, conservator, radiators and control cabinet</figcaption></figure>
+    <figure><img src="img/shot_07_overview_open.jpg" alt="Bay with all operable parts open" loading="lazy"><figcaption>The same bay with every operable part open</figcaption></figure>
+    <figure><img src="img/shot_08_wireframe.jpg" alt="Wireframe" loading="lazy"><figcaption>Wireframe: clean quad-based topology, LOD0</figcaption></figure>
+    <figure><img src="img/shot_02_bay_side.jpg" alt="Bay side view" loading="lazy"><figcaption>Side view with the 1.75 m scale figure</figcaption></figure>
+    <figure><img src="img/shot_11_line_entry_closed.jpg" alt="Line entry closed" loading="lazy"><figcaption>Line entry, disconnector closed: arms straight up</figcaption></figure>
+  </div>
+
+  <h2>How the assets are made</h2>
+  <ul>
+    <li>Every mesh is generated by the author's own Python toolchain for Blender, from typical 138 kV dimensions. Models are generic, not a manufacturer's product.</li>
+    <li>Textures are procedural and tileable (1 m per repetition), with albedo, normal and metallic/smoothness maps.</li>
+    <li>Each piece passes an automatic geometry check (scale, normals, penetrations, operable-part travel) before it is accepted.</li>
+    <li>Claude (Anthropic) was used as a coding assistant for parts of the toolchain and the C# scripts, under the author's direction and review. No generative AI was used for meshes, textures or images.</li>
+  </ul>
+
+  <h2>About</h2>
+  <p>Arkeh_3D is the publisher name of Bruno Goyatá, who builds digital twins of electrical substations for training in VR and on PC.
+     The kit comes from that work: the same equipment types, the same real-scale rules, made generic for the Asset Store.</p>
+  
+  <a class="btn ghost" href="mailto:arkeh3d@gmail.com">Contact</a>
+</main>
+
+<footer>© 2026 Arkeh_3D · Unity is a trademark of Unity Technologies.</footer>
+</body>
+</html>
