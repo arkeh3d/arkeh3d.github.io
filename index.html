@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arkeh_3D · Substation 3D assets</title>
-<meta name="description" content="Arkeh_3D: real-scale 3D assets of high-voltage substation equipment for Unity, built for training, simulation and VR.">
+<title>Arkeh_3D · Power grid 3D assets</title>
+<meta name="description" content="Arkeh_3D: real-scale 3D assets of electrical power grid equipment for Unity: a 138 kV substation kit and a Brazilian power distribution kit, built for training, simulation, games and VR.">
 <link rel="icon" href="img/key_icon_160.png">
 <style>
   :root{--bg:#f5f6f8;--card:#ffffff;--ink:#1b1f24;--mut:#5a6270;--line:#dde1e6;--acc:#1f6fb2}
@@ -17,7 +17,8 @@
   .sub{color:var(--mut);margin:0 auto;font-size:17px}
   main{max-width:1100px;margin:0 auto;padding:0 16px 56px}
   .hero{display:block;width:100%;border-radius:14px;border:1px solid var(--line);margin:16px 0 32px}
-  h2{font-size:22px;margin:40px 0 12px}
+  h2{font-size:26px;margin:56px 0 12px;scroll-margin-top:16px}
+  h3{font-size:19px;margin:32px 0 12px}
   p{max-width:70ch}
   .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
   .fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
@@ -30,6 +31,7 @@
   ul{padding-left:20px}
   li{margin:4px 0}
   .btn{display:inline-block;margin-top:8px;padding:10px 18px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600}
+  .kits{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
   .btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
   footer{border-top:1px solid var(--line);color:var(--mut);font-size:14px;text-align:center;padding:24px 16px}
   code{font-family:ui-monospace,Consolas,monospace;font-size:14px}
@@ -39,13 +41,14 @@
 <header>
   <img src="img/key_icon_160.png" alt="Arkeh_3D">
   <h1>Arkeh_3D</h1>
-  <p class="sub">Real-scale 3D assets of high-voltage substation equipment, made for training, simulation and VR in Unity.</p>
+  <p class="sub">Real-scale 3D assets of electrical power grid equipment, made for training, simulation, games and VR in Unity.</p>
+  <nav class="kits"><a class="btn ghost" href="#substation">Substation 138 kV Kit</a><a class="btn ghost" href="#distribution">Brazilian Power Distribution Kit</a></nav>
 </header>
 
 <main>
   <img class="hero" src="img/key_cover_1950x1300.jpg" alt="Substation 138 kV Kit: a complete line bay in Unity">
 
-  <h2>Substation 138 kV Kit</h2>
+  <h2 id="substation">Substation 138 kV Kit</h2>
   <p>A kit of 14 generic 138 kV substation equipment models at real scale (1 unit = 1 m), with operable parts, connection
      points on every terminal and a conductor tool, so a whole bay can be assembled and operated inside Unity.
      Built for URP and Built-in render pipelines, Unity 6000.0 LTS or newer.</p>
@@ -62,7 +65,7 @@
   <!-- TODO Bruno: quando a página do Asset Store estiver no ar, trocar o href pelo link do pacote -->
   <a class="btn" href="#" aria-disabled="true">Asset Store page (coming soon)</a>
 
-  <h2>Gallery</h2>
+  <h3>Gallery</h3>
   <div class="grid">
     <figure><img src="img/shot_01_bay_overview.jpg" alt="Line bay overview" loading="lazy"><figcaption>Complete 138 kV line bay, assembled in the real order of equipment</figcaption></figure>
     <figure><img src="img/shot_03_line_entry.jpg" alt="Line entry with gantry and semi-pantograph disconnector" loading="lazy"><figcaption>Line entry: gantry with anchor strings and the semi-pantograph disconnector under the switch beam</figcaption></figure>
@@ -77,17 +80,51 @@
     <figure><img src="img/shot_11_line_entry_closed.jpg" alt="Line entry closed" loading="lazy"><figcaption>Line entry, disconnector closed: arms straight up</figcaption></figure>
   </div>
 
+  <h2 id="distribution">Brazilian Power Distribution Kit</h2>
+  <img class="hero" src="img/dist_cover.jpg" alt="Brazilian Power Distribution Kit: a street at dusk with concrete poles and tangled cables" loading="lazy">
+  <p>Brazilian street power lines in minutes: generic concrete double-T poles, 13.8 kV crossarms (bare and compact spacer
+     networks), pole-mounted transformers, low-voltage racks, street lights, service entrances, guy wires and the familiar
+     tangle of telecom cables, placed along a path by the Line Builder tool. Built for URP and Built-in render pipelines,
+     Unity 6000.0 LTS or newer.</p>
+
+  <div class="facts">
+    <div class="fact"><b>37 prefabs</b><span>poles 9 to 12 m, crossarms N1/N3/N4, compact network, transformer 75 kVA, cutouts and arresters, LV racks, street lights, telecom, guy wires, service entrance, street details</span></div>
+    <div class="fact"><b>Line Builder</b><span>Shift + click points: poles, structures by angle, guy wires, conductors with sag, telecom tangle and service drops</span></div>
+    <div class="fact"><b>5 pre-assembled poles</b><span>tangent, transformer, dead end, switches and low voltage only</span></div>
+    <div class="fact"><b>3 LODs</b><span>LOD Group, primitive colliders, 8 shared materials (SRP Batcher)</span></div>
+    <div class="fact"><b>4 scenes</b><span>Demo_StreetBR (a whole street at dusk), Demo_LineBuilder, pre-assembled poles and a Showcase</span></div>
+    <div class="fact"><b>Measured</b><span>200 poles with 200 street lights: 597 fps average, 1 % low 285 fps, RTX 4050 Laptop at 1920 × 1080</span></div>
+  </div>
+
+  <!-- TODO Bruno: quando a página do Asset Store estiver no ar, trocar o href pelo link do pacote -->
+  <a class="btn" href="#" aria-disabled="true">Asset Store page (coming soon)</a>
+
+  <h3>Gallery</h3>
+  <div class="grid">
+    <figure><img src="img/dist_01_street_dusk.jpg" alt="Street at dusk" loading="lazy"><figcaption>Demo_StreetBR at dusk: the network built by the Line Builder along a whole street</figcaption></figure>
+    <figure><img src="img/dist_02_transformer_pole.jpg" alt="Transformer pole" loading="lazy"><figcaption>Transformer pole: fuse cutouts, surge arresters, 75 kVA transformer, low-voltage drops and street light</figcaption></figure>
+    <figure><img src="img/dist_03_tangle.jpg" alt="Telecom cable tangle" loading="lazy"><figcaption>Three telecom messengers with the tangle mode: different sag, slack loops and splice closures</figcaption></figure>
+    <figure><img src="img/dist_07_compact_network.jpg" alt="Compact spacer network" loading="lazy"><figcaption>Compact spacer network: dead end with polymer strings and diamond spacers</figcaption></figure>
+    <figure><img src="img/dist_09_preassembled_poles.jpg" alt="Pre-assembled poles" loading="lazy"><figcaption>Pre-assembled poles, ready to drop in a scene</figcaption></figure>
+    <figure><img src="img/dist_05_houses.jpg" alt="Street with houses" loading="lazy"><figcaption>Street light on, service drops to the houses</figcaption></figure>
+    <figure><img src="img/dist_10_detail_nest.jpg" alt="Bird nest on the crossarm" loading="lazy"><figcaption>Brazilian details: an ovenbird nest on the crossarm</figcaption></figure>
+    <figure><img src="img/dist_11_detail_kite.jpg" alt="Kite caught in the wires" loading="lazy"><figcaption>A kite caught in the low-voltage wires</figcaption></figure>
+    <figure><img src="img/dist_04_aerial.jpg" alt="Aerial view of the street" loading="lazy"><figcaption>Aerial view of the demo street with the street lights on</figcaption></figure>
+    <figure><img src="img/dist_06_street_day.jpg" alt="Street by day" loading="lazy"><figcaption>The same street by day</figcaption></figure>
+    <figure><img src="img/dist_08_wireframe.jpg" alt="Transformer wireframe" loading="lazy"><figcaption>Wireframe of the pole-mounted transformer, LOD0</figcaption></figure>
+  </div>
+
   <h2>How the assets are made</h2>
   <ul>
-    <li>Every mesh is generated by the author's own Python toolchain for Blender, from typical 138 kV dimensions. Models are generic, not a manufacturer's product.</li>
+    <li>Every mesh is generated by the author's own Python toolchain for Blender, from typical dimensions of public standards (138 kV substations, 13.8 kV and low-voltage distribution). Models are generic, not a manufacturer's product.</li>
     <li>Textures are procedural and tileable (1 m per repetition), with albedo, normal and metallic/smoothness maps.</li>
-    <li>Each piece passes an automatic geometry check (scale, normals, penetrations, operable-part travel) before it is accepted.</li>
+    <li>Each piece passes an automatic geometry check (scale, normals, penetrations, operable-part travel) before it is accepted, and each package is imported into empty URP and Built-in projects before release.</li>
     <li>Claude (Anthropic) was used as a coding assistant for parts of the toolchain and the C# scripts, under the author's direction and review. No generative AI was used for meshes, textures or images.</li>
   </ul>
 
   <h2>About</h2>
   <p>Arkeh_3D is the publisher name of Bruno Goyatá, who builds digital twins of electrical substations for training in VR and on PC.
-     The kit comes from that work: the same equipment types, the same real-scale rules, made generic for the Asset Store.</p>
+     The kits come from that work: the same equipment types, the same real-scale rules, made generic for the Asset Store.</p>
   
   <a class="btn ghost" href="mailto:arkeh3d@gmail.com">Contact</a>
 </main>
